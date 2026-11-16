@@ -1,0 +1,87 @@
+name: CaneIslands
+version: 1.0.0
+main: com.canefarm.CaneIslands
+api-version: '1.21'
+softdepend: [LuckPerms]
+authors: [AshieCloud045]
+website: Discord - AshieCloud045
+description: Sugarcane island grind with doubling daily quotas, rewards and a shop.
+commands:
+  start:
+    description: Creates your personal cane island and gives you the starter kit. You can only do this once.
+    usage: /start
+  canehome:
+    description: Teleports you back to your own island from anywhere, including when you are visiting someone else.
+    usage: /canehome
+  sell:
+    description: Sells all sugar cane in your inventory for coins and adds it to today's quota and /canetop.
+    usage: /sell
+    aliases: [submit]
+  caneday:
+    description: Starts the next day once today's quota is done. Each day doubles the cane needed and has a timer.
+    usage: /caneday
+  caneinfo:
+    description: Shows your day, quota, timer, coins, rebirths, multipliers, chunks and Auto Sell income.
+    usage: /caneinfo
+  canerewards:
+    description: Previews the rewards for your next few days. Days you already claimed are marked.
+    usage: /canerewards
+  canetop:
+    description: Shows the top 10 players by total cane submitted this prestige, plus your own position.
+    usage: /canetop
+  caneshop:
+    description: Opens the shop to spend coins on upgrades, perks, tools, infinite blocks and pouches. Prices double per purchase.
+    usage: /caneshop
+  isfly:
+    description: Turns flight on or off on your island. Needs the Flight upgrade from the shop.
+    usage: /isfly
+  options:
+    description: Opens a menu to toggle messages, action bar, timer warnings, scoreboard and sounds.
+    usage: /options
+    aliases: [caneoptions]
+  autocaneday:
+    description: Toggles Auto Day, which starts the next day by itself once you finish a quota. Needs the Auto Day upgrade.
+    usage: /autocaneday
+  daytoggle:
+    description: Locks your island to permanent day or night, only visible to you. Use reset to go back. Needs the shop upgrade.
+    usage: /daytoggle [reset]
+  is:
+    description: Island tools - visit, trust or untrust players, list trusted, go home, or reset. Reset wipes only your island, you keep all progress.
+    usage: /is <visit|trust|untrust|trusted|home|reset> [player]
+    aliases: [caneisland]
+  rebirth:
+    description: Prestige - go back to Day 1 and reset /canetop for a permanent cane and coin boost plus cheaper shop prices.
+    usage: /rebirth
+  autorebirth:
+    description: Toggles Auto Rebirth, which prestiges you automatically as soon as you reach the required day.
+    usage: /autorebirth
+  reset:
+    description: Wipes your ENTIRE progress - day, coins, upgrades, chunks, island, inventory and ender chest. Needs confirmation.
+    usage: /reset
+    aliases: [canereset]
+  commands:
+    description: Opens this menu with every command and what it does. Click a command to run it. Also opens with the F key.
+    usage: /commands
+    aliases: [canecommands, canehelp]
+  lightblock:
+    description: Fills every empty block of the chunk you stand in with light level 15 so mobs never spawn. Use remove to undo.
+    usage: /lightblock [remove]
+  removesponge:
+    description: Removes every sponge, wet and dry, from all chunks of your island in one go.
+    usage: /removesponge
+  drain:
+    description: Drains all water and waterlogging from the chunk you stand in, on the layer (Y level) you are standing at only.
+    usage: /drain
+  chunkmanagement:
+    description: Opens the chunk menu - view your unlocked chunks, show borders with particles, and choose if new chunks come with blocks.
+    usage: /chunkmanagement
+  pay:
+    description: Sends coins to another player, even offline. Accepts k, m and b, like 1.5k or 2m.
+    usage: /pay <player> <amount>
+  caneadmin:
+    description: Admin tools to give coins, set a player's day, or add a chunk to a player. Needs caneislands.admin.
+    usage: /caneadmin <coins|day|chunk> <player> [amount]
+permissions:
+  caneislands.admin:
+    description: Admin access and build bypass.
+    default: op
